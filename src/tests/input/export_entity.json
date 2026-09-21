@@ -1,0 +1,11 @@
+{
+  "description": "Artifacts read one at a time from the source instance, to prove the export before any relation is followed. Add an entry to export another one: the test runs once per entry.",
+  "artifacts": [
+    {
+      "artifact_type": "requirement",
+      "id": 11437751,
+      "name": "MSTQ-4299",
+      "why": "First requirement of the inventory tied to nothing: no release, no test plan, no test case. Migrating it moves one artifact and no relations."
+    }
+  ]
+}

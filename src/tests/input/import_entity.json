@@ -1,0 +1,11 @@
+{
+  "description": "Artifacts injected one at a time into the target instance. Each one must already have been exported: the importer reads migration/exported/<Artifact>_<id>_stand-alone.json. The test runs once per entry.",
+  "artifacts": [
+    {
+      "artifact_type": "requirement",
+      "id": 11437751,
+      "name": "MSTQ-4299",
+      "why": "The same requirement the export starts with: tied to nothing in HS, so injecting it moves one artifact and no relations."
+    }
+  ]
+}

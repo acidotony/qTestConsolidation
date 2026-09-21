@@ -1,0 +1,872 @@
+C:\Repositories\qTestConsolidation\.venv\Scripts\python.exe "C:/Program Files/JetBrains/PyCharm 2025.3.1/plugins/python-ce/helpers/pycharm/_jb_pytest_runner.py" --path C:\Repositories\qTestConsolidation\src\tests\inventory\test_diagnose_jira_in_test_runs.py
+Testing started at 3:34 PM ...
+Launching pytest with arguments C:\Repositories\qTestConsolidation\src\tests\inventory\test_diagnose_jira_in_test_runs.py --no-header --no-summary -q in C:\Repositories\qTestConsolidation
+
+============================= test session starts =============================
+collecting ... collected 6 items
+
+src/tests/inventory/test_diagnose_jira_in_test_runs.py::test_no_structured_integration_on_test_runs
+src/tests/inventory/test_diagnose_jira_in_test_runs.py::test_report_jira_in_the_free_text_of_test_runs
+src/tests/inventory/test_diagnose_jira_in_test_runs.py::test_no_test_run_is_linked_to_a_defect
+src/tests/inventory/test_diagnose_jira_in_test_runs.py::test_report_the_logs_of_each_run
+src/tests/inventory/test_diagnose_jira_in_test_runs.py::test_report_the_containers_the_runs_hang_from
+src/tests/inventory/test_diagnose_jira_in_test_runs.py::test_report_what_the_walk_leaves_out
+
+======================== 1 failed, 5 passed in 38.20s =========================
+2026-09-18 15:34:28 INFO     main.client.rest_client | Loading SOURCE connection settings from C:\Repositories\qTestConsolidation\config\qtest.env
+2026-09-18 15:34:28 INFO     main.client.rest_client | TLS verification delegated to the operating system certificate store
+2026-09-18 15:34:28 INFO     main.client.rest_client | REST client ready for https://healthspring.qtestnet.com (timeout=30s, retries=3)
+2026-09-18 15:34:28 INFO     main.exporter.data_exporter | Fetching test_plans, page 1
+2026-09-18 15:34:28 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/releases
+2026-09-18 15:34:29 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/releases -> 200 in 0.52s
+2026-09-18 15:34:29 INFO     main.exporter.data_exporter | Fetching test_plans, page 2
+2026-09-18 15:34:29 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/releases
+2026-09-18 15:34:29 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/releases -> 200 in 0.15s
+2026-09-18 15:34:29 WARNING  main.exporter.data_exporter | Page 2 of test_plans repeated entities already seen: the endpoint seems to ignore paging, stopping here
+2026-09-18 15:34:29 INFO     main.exporter.data_exporter | Collected 25 test_plans
+2026-09-18 15:34:29 INFO     main.exporter.data_exporter | Reading the test runs of project 24901 in one call
+2026-09-18 15:34:29 INFO     main.exporter.data_exporter | Fetching test_runs, page 1
+2026-09-18 15:34:29 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs
+2026-09-18 15:34:30 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs -> 200 in 1.37s
+2026-09-18 15:34:30 INFO     main.exporter.data_exporter | Fetching test_runs, page 2
+2026-09-18 15:34:30 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs
+2026-09-18 15:34:31 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs -> 200 in 0.28s
+2026-09-18 15:34:31 INFO     main.exporter.data_exporter | Collected 75 test_runs
+2026-09-18 15:34:31 INFO     main.exporter.data_exporter | Fetching test-cycles, page 1
+2026-09-18 15:34:31 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:31 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.18s
+2026-09-18 15:34:31 INFO     main.exporter.data_exporter | Fetching test-cycles, page 2
+2026-09-18 15:34:31 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:31 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.12s
+2026-09-18 15:34:31 INFO     main.exporter.data_exporter | Collected 3 test-cycles
+2026-09-18 15:34:31 INFO     main.exporter.data_exporter | Fetching test-suites, page 1
+2026-09-18 15:34:31 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:31 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.10s
+2026-09-18 15:34:31 INFO     main.exporter.data_exporter | Collected 0 test-suites
+2026-09-18 15:34:31 INFO     main.exporter.data_exporter | Indexed 3 containers of the execution tree
+2026-09-18 15:34:31 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1213644
+2026-09-18 15:34:31 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1213644 -> 200 in 0.15s
+2026-09-18 15:34:31 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1213645
+2026-09-18 15:34:31 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1213645 -> 200 in 0.11s
+2026-09-18 15:34:31 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1213642
+2026-09-18 15:34:31 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1213642 -> 200 in 0.15s
+2026-09-18 15:34:31 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1213643
+2026-09-18 15:34:32 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1213643 -> 200 in 0.11s
+2026-09-18 15:34:32 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1213640
+2026-09-18 15:34:32 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1213640 -> 200 in 0.13s
+2026-09-18 15:34:32 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1213641
+2026-09-18 15:34:32 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1213641 -> 200 in 0.11s
+2026-09-18 15:34:32 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles/662412
+2026-09-18 15:34:32 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles/662412 -> 200 in 0.12s
+2026-09-18 15:34:32 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1287720
+2026-09-18 15:34:32 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1287720 -> 200 in 0.15s
+2026-09-18 15:34:32 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1287719
+2026-09-18 15:34:32 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1287719 -> 200 in 0.14s
+2026-09-18 15:34:32 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1428271
+2026-09-18 15:34:32 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1428271 -> 200 in 0.14s
+2026-09-18 15:34:32 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1431536
+2026-09-18 15:34:32 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1431536 -> 200 in 0.14s
+2026-09-18 15:34:32 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1432088
+2026-09-18 15:34:33 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1432088 -> 200 in 0.14s
+2026-09-18 15:34:33 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1469854
+2026-09-18 15:34:33 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites/1469854 -> 200 in 0.14s
+2026-09-18 15:34:33 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles/667024
+2026-09-18 15:34:33 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles/667024 -> 200 in 0.12s
+2026-09-18 15:34:33 INFO     main.exporter.data_exporter | Located 75 test runs: 5 under a release, 70 under a named container
+PASSED [ 16%]
+1. Structured integration fields, across 75 test runs
+   keys looked for : ['external_id', 'external_system', 'external_system_id', 'jira_id', 'jira_key'], custom fields, web_url
+   carrying one    : 0
+PASSED [ 33%]
+2. Free text of the test runs
+   test runs: 75 entities
+     with a Jira URL : 0
+     nothing that looks like a Jira reference
+FAILED [ 50%]2026-09-18 15:34:33 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/linked-artifacts
+2026-09-18 15:34:33 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/linked-artifacts -> 200 in 0.30s
+2026-09-18 15:34:33 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/linked-artifacts
+2026-09-18 15:34:33 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/linked-artifacts -> 200 in 0.14s
+
+3. What 75 test runs are linked to
+     test-cases       75
+     defects          10
+     run 10063504 -> defect 1576916 DF-6
+     run 10063486 -> defect 1576914 DF-4
+     run 10063482 -> defect 1576919 DF-9
+     run 10063506 -> defect 1576916 DF-6
+     run 10063516 -> defect 1576920 DF-10
+     run 10063508 -> defect 1576917 DF-7
+     run 10063510 -> defect 1576918 DF-8
+     run 10063488 -> defect 1576913 DF-3
+     run 10063518 -> defect 1576919 DF-9
+     run 10063495 -> defect 1576914 DF-4
+
+src\tests\inventory\test_diagnose_jira_in_test_runs.py:133 (test_no_test_run_is_linked_to_a_defect)
+source_client = RestClient(base_url='https://healthspring.qtestnet.com', api_token='...a279')
+project_id = 24901
+test_runs = [{'automation': 'No', 'created_date': '2026-08-13T08:22:11+00:00', 'creator_id': 671588, 'id': 18978427, ...}, {'autom.....}, {'automation': 'No', 'created_date': '2026-04-07T18:10:39+00:00', 'creator_id': 670195, 'id': 12944448, ...}, ...]
+
+    @pytest.mark.integration
+    def test_no_test_run_is_linked_to_a_defect(source_client, project_id, test_runs):
+        """3. What the executions are linked to — where a defect hangs."""
+        path = f"{PROJECTS_ENDPOINT}/{project_id}/linked-artifacts"
+        ids = [run["id"] for run in test_runs]
+        kinds = Counter()
+        defects = {}
+
+        for start in range(0, len(ids), LINK_BATCH_SIZE):
+            batch = ids[start:start + LINK_BATCH_SIZE]
+            response = source_client.get(path, params={"type": "test-runs", "ids": batch})
+            if not response.ok:
+                pytest.skip(f"linked-artifacts refused test-runs: {response.status_code}")
+
+            for entry in response.json():
+                for linked in entry.get("objects") or []:
+                    kind = DataExporter._linked_kind(linked) or "unknown"
+                    kinds[kind] += 1
+                    if kind.startswith("defect"):
+                        defects[entry.get("id")] = linked
+
+        print(f"\n3. What {len(ids)} test runs are linked to")
+        for kind, count in kinds.most_common():
+            print(f"     {kind:<16} {count}")
+        if not kinds:
+            print("     nothing at all")
+        for run_id, defect in list(defects.items())[:10]:
+            print(f"     run {run_id} -> defect {defect.get('id')} {defect.get('pid')}")
+
+>       assert not defects, f"{len(defects)} test runs are linked to a defect: {list(defects)[:5]}"
+E       AssertionError: 10 test runs are linked to a defect: [10063504, 10063486, 10063482, 10063506, 10063516]
+E       assert not {10063482: {'id': 1576919, 'is_internal': True, 'link_type': 'is_associated_with', 'pid': 'DF-9', ...}, 10063486: {'id': 1576914, 'is_internal': True, 'link_type': 'is_associated_with', 'pid': 'DF-4', ...}, 10063488: {'id': 1576913, 'is_internal': True, 'link_type': 'is_associated_with', 'pid': 'DF-3', ...}, 10063495: {'id': 1576914, 'is_internal': True, 'link_type': 'is_associated_with', 'pid': 'DF-4', ...}, ...}
+
+src\tests\inventory\test_diagnose_jira_in_test_runs.py:163: AssertionError
+PASSED [ 66%]
+4. Test logs of 75 of the 75 runs
+2026-09-18 15:34:34 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/18978427/test-logs
+2026-09-18 15:34:34 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/18978427/test-logs -> 200 in 0.09s
+2026-09-18 15:34:34 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/14665261/test-logs
+2026-09-18 15:34:34 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/14665261/test-logs -> 200 in 0.18s
+2026-09-18 15:34:34 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12944445/test-logs
+2026-09-18 15:34:34 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12944445/test-logs -> 200 in 0.25s
+2026-09-18 15:34:34 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12944449/test-logs
+2026-09-18 15:34:34 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12944449/test-logs -> 200 in 0.09s
+2026-09-18 15:34:34 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12944447/test-logs
+2026-09-18 15:34:34 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12944447/test-logs -> 200 in 0.21s
+2026-09-18 15:34:34 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12944448/test-logs
+2026-09-18 15:34:35 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12944448/test-logs -> 200 in 0.20s
+2026-09-18 15:34:35 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12944446/test-logs
+2026-09-18 15:34:35 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12944446/test-logs -> 200 in 0.21s
+2026-09-18 15:34:35 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063484/test-logs
+2026-09-18 15:34:35 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063484/test-logs -> 200 in 0.20s
+2026-09-18 15:34:35 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063504/test-logs
+2026-09-18 15:34:35 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063504/test-logs -> 200 in 0.24s
+2026-09-18 15:34:35 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12336633/test-logs
+2026-09-18 15:34:35 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12336633/test-logs -> 200 in 0.09s
+2026-09-18 15:34:35 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063490/test-logs
+2026-09-18 15:34:36 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063490/test-logs -> 200 in 0.20s
+2026-09-18 15:34:36 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063486/test-logs
+2026-09-18 15:34:36 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063486/test-logs -> 200 in 0.23s
+2026-09-18 15:34:36 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063496/test-logs
+2026-09-18 15:34:36 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063496/test-logs -> 200 in 0.21s
+2026-09-18 15:34:36 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063482/test-logs
+2026-09-18 15:34:36 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063482/test-logs -> 200 in 0.20s
+2026-09-18 15:34:36 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063502/test-logs
+2026-09-18 15:34:36 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063502/test-logs -> 200 in 0.19s
+2026-09-18 15:34:36 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12336632/test-logs
+2026-09-18 15:34:36 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12336632/test-logs -> 200 in 0.07s
+2026-09-18 15:34:36 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063492/test-logs
+2026-09-18 15:34:37 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063492/test-logs -> 200 in 0.19s
+2026-09-18 15:34:37 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063512/test-logs
+2026-09-18 15:34:37 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063512/test-logs -> 200 in 0.28s
+2026-09-18 15:34:37 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063506/test-logs
+2026-09-18 15:34:37 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063506/test-logs -> 200 in 0.32s
+2026-09-18 15:34:37 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063481/test-logs
+2026-09-18 15:34:37 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063481/test-logs -> 200 in 0.25s
+2026-09-18 15:34:37 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063516/test-logs
+2026-09-18 15:34:38 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063516/test-logs -> 200 in 0.29s
+2026-09-18 15:34:38 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063508/test-logs
+2026-09-18 15:34:38 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063508/test-logs -> 200 in 0.25s
+2026-09-18 15:34:38 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063494/test-logs
+2026-09-18 15:34:38 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063494/test-logs -> 200 in 0.25s
+2026-09-18 15:34:38 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063510/test-logs
+2026-09-18 15:34:38 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063510/test-logs -> 200 in 0.20s
+2026-09-18 15:34:38 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063488/test-logs
+2026-09-18 15:34:39 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063488/test-logs -> 200 in 0.21s
+2026-09-18 15:34:39 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063498/test-logs
+2026-09-18 15:34:39 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063498/test-logs -> 200 in 0.27s
+2026-09-18 15:34:39 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12336631/test-logs
+2026-09-18 15:34:39 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12336631/test-logs -> 200 in 0.10s
+2026-09-18 15:34:39 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063518/test-logs
+2026-09-18 15:34:40 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063518/test-logs -> 200 in 0.79s
+2026-09-18 15:34:40 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063514/test-logs
+2026-09-18 15:34:40 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063514/test-logs -> 200 in 0.27s
+2026-09-18 15:34:40 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063500/test-logs
+2026-09-18 15:34:40 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063500/test-logs -> 200 in 0.23s
+2026-09-18 15:34:40 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12336630/test-logs
+2026-09-18 15:34:41 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12336630/test-logs -> 200 in 0.24s
+2026-09-18 15:34:41 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063485/test-logs
+2026-09-18 15:34:41 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063485/test-logs -> 200 in 0.25s
+2026-09-18 15:34:41 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063505/test-logs
+2026-09-18 15:34:41 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063505/test-logs -> 200 in 0.24s
+2026-09-18 15:34:41 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063491/test-logs
+2026-09-18 15:34:41 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063491/test-logs -> 200 in 0.20s
+2026-09-18 15:34:41 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063487/test-logs
+2026-09-18 15:34:42 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063487/test-logs -> 200 in 0.25s
+2026-09-18 15:34:42 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063497/test-logs
+2026-09-18 15:34:42 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063497/test-logs -> 200 in 0.20s
+2026-09-18 15:34:42 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063483/test-logs
+2026-09-18 15:34:42 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063483/test-logs -> 200 in 0.22s
+2026-09-18 15:34:42 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063503/test-logs
+2026-09-18 15:34:42 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063503/test-logs -> 200 in 0.22s
+2026-09-18 15:34:42 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063493/test-logs
+2026-09-18 15:34:42 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063493/test-logs -> 200 in 0.22s
+2026-09-18 15:34:42 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063513/test-logs
+2026-09-18 15:34:43 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063513/test-logs -> 200 in 0.40s
+2026-09-18 15:34:43 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063507/test-logs
+2026-09-18 15:34:43 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063507/test-logs -> 200 in 0.34s
+2026-09-18 15:34:43 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063480/test-logs
+2026-09-18 15:34:44 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063480/test-logs -> 200 in 0.44s
+2026-09-18 15:34:44 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063517/test-logs
+2026-09-18 15:34:44 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063517/test-logs -> 200 in 0.34s
+2026-09-18 15:34:44 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063509/test-logs
+2026-09-18 15:34:44 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063509/test-logs -> 200 in 0.24s
+2026-09-18 15:34:44 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063495/test-logs
+2026-09-18 15:34:44 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063495/test-logs -> 200 in 0.24s
+2026-09-18 15:34:44 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063511/test-logs
+2026-09-18 15:34:45 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063511/test-logs -> 200 in 0.30s
+2026-09-18 15:34:45 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063489/test-logs
+2026-09-18 15:34:45 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063489/test-logs -> 200 in 0.22s
+2026-09-18 15:34:45 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063499/test-logs
+2026-09-18 15:34:45 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063499/test-logs -> 200 in 0.27s
+2026-09-18 15:34:45 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063519/test-logs
+2026-09-18 15:34:46 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063519/test-logs -> 200 in 0.33s
+2026-09-18 15:34:46 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063515/test-logs
+2026-09-18 15:34:46 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063515/test-logs -> 200 in 0.20s
+2026-09-18 15:34:46 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063501/test-logs
+2026-09-18 15:34:46 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10063501/test-logs -> 200 in 0.25s
+2026-09-18 15:34:46 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10915355/test-logs
+2026-09-18 15:34:46 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10915355/test-logs -> 200 in 0.12s
+2026-09-18 15:34:46 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10915356/test-logs
+2026-09-18 15:34:46 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10915356/test-logs -> 200 in 0.08s
+2026-09-18 15:34:46 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10837092/test-logs
+2026-09-18 15:34:47 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10837092/test-logs -> 200 in 0.43s
+2026-09-18 15:34:47 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12539599/test-logs
+2026-09-18 15:34:47 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12539599/test-logs -> 200 in 0.08s
+2026-09-18 15:34:47 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12531279/test-logs
+2026-09-18 15:34:47 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12531279/test-logs -> 200 in 0.10s
+2026-09-18 15:34:47 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12531281/test-logs
+2026-09-18 15:34:47 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12531281/test-logs -> 200 in 0.11s
+2026-09-18 15:34:47 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10947195/test-logs
+2026-09-18 15:34:47 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10947195/test-logs -> 200 in 0.12s
+2026-09-18 15:34:47 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10914350/test-logs
+2026-09-18 15:34:47 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10914350/test-logs -> 200 in 0.10s
+2026-09-18 15:34:47 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10914351/test-logs
+2026-09-18 15:34:47 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/10914351/test-logs -> 200 in 0.08s
+2026-09-18 15:34:47 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12548100/test-logs
+2026-09-18 15:34:47 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12548100/test-logs -> 200 in 0.09s
+2026-09-18 15:34:47 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12548096/test-logs
+2026-09-18 15:34:47 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12548096/test-logs -> 200 in 0.10s
+2026-09-18 15:34:47 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12548099/test-logs
+2026-09-18 15:34:47 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12548099/test-logs -> 200 in 0.09s
+2026-09-18 15:34:47 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12548095/test-logs
+2026-09-18 15:34:48 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12548095/test-logs -> 200 in 0.10s
+2026-09-18 15:34:48 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12548088/test-logs
+2026-09-18 15:34:48 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12548088/test-logs -> 200 in 0.08s
+2026-09-18 15:34:48 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12548098/test-logs
+2026-09-18 15:34:48 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12548098/test-logs -> 200 in 0.10s
+2026-09-18 15:34:48 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12548089/test-logs
+2026-09-18 15:34:48 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12548089/test-logs -> 200 in 0.08s
+2026-09-18 15:34:48 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12548097/test-logs
+2026-09-18 15:34:48 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12548097/test-logs -> 200 in 0.08s
+2026-09-18 15:34:48 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12496517/test-logs
+2026-09-18 15:34:48 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12496517/test-logs -> 200 in 0.19s
+2026-09-18 15:34:48 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12496518/test-logs
+2026-09-18 15:34:48 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12496518/test-logs -> 200 in 0.21s
+2026-09-18 15:34:48 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12496516/test-logs
+2026-09-18 15:34:48 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12496516/test-logs -> 200 in 0.17s
+2026-09-18 15:34:48 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12496515/test-logs
+2026-09-18 15:34:49 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12496515/test-logs -> 200 in 0.21s
+2026-09-18 15:34:49 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/13772578/test-logs
+2026-09-18 15:34:49 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/13772578/test-logs -> 200 in 0.10s
+2026-09-18 15:34:49 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12505503/test-logs
+2026-09-18 15:34:49 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/12505503/test-logs -> 200 in 0.25s
+2026-09-18 15:34:49 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/13895278/test-logs
+2026-09-18 15:34:49 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/13895278/test-logs -> 200 in 0.08s
+   logs read            : 64
+   runs whose logs were refused : 0
+   logs naming a defect : 3
+     run 10063506: [{'links': [], 'id': 1576916, 'connection_id': 0, 'summary': 'The Free Trial link does not work ', 'status': 'Assigned', 'pid': 'DF-6', 'description': 'URL: http://www.qasymphony.com/\n  \n  \n  Step:\n  \n  1) Launch the homepage\n  \n  2) The Free Trial link on homepage'}]
+     run 10063516: [{'links': [], 'id': 1576920, 'connection_id': 0, 'summary': 'The Learn More button is not activated', 'status': 'New', 'pid': 'DF-10', 'description': 'URL: http://www.qasymphony.com/\n  \n  \n  Step:\n  \n  1) Launch the homepage\n  \n  2) The Learn More button of qTest for test case management on the homepage\n  \n  \n  Screen 1: QASymphony | Complete Test Case Management Platform\n  * System Information:\n    Operating System: Microsoft Windows 8.1 Enterprise 64-bit, Version 6.3.9600\n    Resolutions: 1366x768, 1920x1080\n    qTest eXplorer Version: 5.0.2.1\n    IE version: 11.0.9600.17031\n    ADO version: 6.3.9600.16384\n    CPU: Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz\n    RAM: 8103.88 MB\n    Available RAM: 4503.97 MB\n    User: KMS\\nhuqnguyen\n  * Recorded Application 1: chrome.exe\n    Application version: 46.0\n    File path: C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\n    File version: 46.0.2490.71\n    File size: 0.77MB (811848 Bytes)\n    File modified date: 2015-10-08T17:53:06+00:00\n  * Additional Info:\n    Record Time: 10/20/2015 09:58:50 AM - 10/20/2015 10:05:54 AM\n  Session URL: https://kmstechnology07.qtestnet.com/p/18655/portal/session/4722517876878/review#'}]
+     run 10063510: [{'links': [], 'id': 1576918, 'connection_id': 0, 'summary': 'Email is not delivered after subscribing', 'status': 'New', 'pid': 'DF-8', 'description': 'Email is not delivered after subscribing'}]
+   logs with a Jira URL : 2
+     run 10063512: http://www.qasymphony.com/platform/jira-integration.html
+     run 10063513: http://www.qasymphony.com/platform/jira-integration.html
+2026-09-18 15:34:49 INFO     main.exporter.data_exporter | Fetching test_plans, page 1
+2026-09-18 15:34:49 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/releases
+2026-09-18 15:34:49 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/releases -> 200 in 0.15s
+2026-09-18 15:34:49 INFO     main.exporter.data_exporter | Fetching test_plans, page 2
+2026-09-18 15:34:49 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/releases
+2026-09-18 15:34:49 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/releases -> 200 in 0.13s
+2026-09-18 15:34:49 WARNING  main.exporter.data_exporter | Page 2 of test_plans repeated entities already seen: the endpoint seems to ignore paging, stopping here
+2026-09-18 15:34:49 INFO     main.exporter.data_exporter | Collected 25 test_plans
+2026-09-18 15:34:49 INFO     main.exporter.data_exporter | Enumerating the containers of the execution tree
+2026-09-18 15:34:49 INFO     main.exporter.data_exporter | Fetching test-suites under release 130417, page 1
+2026-09-18 15:34:49 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:50 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.10s
+2026-09-18 15:34:50 INFO     main.exporter.data_exporter | Collected 0 test-suites under release 130417
+2026-09-18 15:34:50 INFO     main.exporter.data_exporter | Fetching test-cycles under release 130417, page 1
+2026-09-18 15:34:50 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:50 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.11s
+2026-09-18 15:34:50 INFO     main.exporter.data_exporter | Collected 0 test-cycles under release 130417
+2026-09-18 15:34:50 INFO     main.exporter.data_exporter | Fetching test-suites under release 129788, page 1
+2026-09-18 15:34:50 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:50 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.12s
+2026-09-18 15:34:50 INFO     main.exporter.data_exporter | Collected 0 test-suites under release 129788
+2026-09-18 15:34:50 INFO     main.exporter.data_exporter | Fetching test-cycles under release 129788, page 1
+2026-09-18 15:34:50 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:50 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.09s
+2026-09-18 15:34:50 INFO     main.exporter.data_exporter | Fetching test-cycles under release 129788, page 2
+2026-09-18 15:34:50 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:50 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.09s
+2026-09-18 15:34:50 INFO     main.exporter.data_exporter | Collected 2 test-cycles under release 129788
+2026-09-18 15:34:50 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 826053, page 1
+2026-09-18 15:34:50 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:50 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.10s
+2026-09-18 15:34:50 INFO     main.exporter.data_exporter | Collected 0 test-suites under test-cycle 826053
+2026-09-18 15:34:50 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 826053, page 1
+2026-09-18 15:34:50 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:50 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.09s
+2026-09-18 15:34:50 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 826053
+2026-09-18 15:34:50 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 825891, page 1
+2026-09-18 15:34:50 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:50 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.16s
+2026-09-18 15:34:50 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 825891, page 2
+2026-09-18 15:34:50 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:50 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.14s
+2026-09-18 15:34:50 WARNING  main.exporter.data_exporter | Page 2 of test-suites under test-cycle 825891 repeated entities already seen: the endpoint seems to ignore paging, stopping here
+2026-09-18 15:34:50 INFO     main.exporter.data_exporter | Collected 8 test-suites under test-cycle 825891
+2026-09-18 15:34:50 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 825891, page 1
+2026-09-18 15:34:50 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:51 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.09s
+2026-09-18 15:34:51 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 825891
+2026-09-18 15:34:51 INFO     main.exporter.data_exporter | Fetching test-suites under release 128060, page 1
+2026-09-18 15:34:51 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:51 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.10s
+2026-09-18 15:34:51 INFO     main.exporter.data_exporter | Collected 0 test-suites under release 128060
+2026-09-18 15:34:51 INFO     main.exporter.data_exporter | Fetching test-cycles under release 128060, page 1
+2026-09-18 15:34:51 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:51 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.09s
+2026-09-18 15:34:51 INFO     main.exporter.data_exporter | Fetching test-cycles under release 128060, page 2
+2026-09-18 15:34:51 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:51 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.10s
+2026-09-18 15:34:51 INFO     main.exporter.data_exporter | Collected 3 test-cycles under release 128060
+2026-09-18 15:34:51 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 826064, page 1
+2026-09-18 15:34:51 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:51 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.14s
+2026-09-18 15:34:51 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 826064, page 2
+2026-09-18 15:34:51 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:51 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.13s
+2026-09-18 15:34:51 WARNING  main.exporter.data_exporter | Page 2 of test-suites under test-cycle 826064 repeated entities already seen: the endpoint seems to ignore paging, stopping here
+2026-09-18 15:34:51 INFO     main.exporter.data_exporter | Collected 8 test-suites under test-cycle 826064
+2026-09-18 15:34:51 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 826064, page 1
+2026-09-18 15:34:51 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:51 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.09s
+2026-09-18 15:34:51 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 826064
+2026-09-18 15:34:51 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 826062, page 1
+2026-09-18 15:34:51 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:51 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.15s
+2026-09-18 15:34:51 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 826062, page 2
+2026-09-18 15:34:51 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:51 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.14s
+2026-09-18 15:34:51 WARNING  main.exporter.data_exporter | Page 2 of test-suites under test-cycle 826062 repeated entities already seen: the endpoint seems to ignore paging, stopping here
+2026-09-18 15:34:51 INFO     main.exporter.data_exporter | Collected 5 test-suites under test-cycle 826062
+2026-09-18 15:34:51 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 826062, page 1
+2026-09-18 15:34:51 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:52 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.14s
+2026-09-18 15:34:52 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 826062
+2026-09-18 15:34:52 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 806025, page 1
+2026-09-18 15:34:52 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:52 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.15s
+2026-09-18 15:34:52 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 806025, page 2
+2026-09-18 15:34:52 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:52 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.15s
+2026-09-18 15:34:52 WARNING  main.exporter.data_exporter | Page 2 of test-suites under test-cycle 806025 repeated entities already seen: the endpoint seems to ignore paging, stopping here
+2026-09-18 15:34:52 INFO     main.exporter.data_exporter | Collected 2 test-suites under test-cycle 806025
+2026-09-18 15:34:52 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 806025, page 1
+2026-09-18 15:34:52 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:52 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.09s
+2026-09-18 15:34:52 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 806025
+2026-09-18 15:34:52 INFO     main.exporter.data_exporter | Fetching test-suites under release 128059, page 1
+2026-09-18 15:34:52 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:52 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.10s
+2026-09-18 15:34:52 INFO     main.exporter.data_exporter | Collected 0 test-suites under release 128059
+2026-09-18 15:34:52 INFO     main.exporter.data_exporter | Fetching test-cycles under release 128059, page 1
+2026-09-18 15:34:52 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:52 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.09s
+2026-09-18 15:34:52 INFO     main.exporter.data_exporter | Fetching test-cycles under release 128059, page 2
+2026-09-18 15:34:52 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:52 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.10s
+2026-09-18 15:34:52 INFO     main.exporter.data_exporter | Collected 1 test-cycles under release 128059
+2026-09-18 15:34:52 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 806023, page 1
+2026-09-18 15:34:52 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:52 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.11s
+2026-09-18 15:34:52 INFO     main.exporter.data_exporter | Collected 0 test-suites under test-cycle 806023
+2026-09-18 15:34:52 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 806023, page 1
+2026-09-18 15:34:52 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:52 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.09s
+2026-09-18 15:34:52 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 806023
+2026-09-18 15:34:52 INFO     main.exporter.data_exporter | Fetching test-suites under release 127416, page 1
+2026-09-18 15:34:52 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:53 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.09s
+2026-09-18 15:34:53 INFO     main.exporter.data_exporter | Collected 0 test-suites under release 127416
+2026-09-18 15:34:53 INFO     main.exporter.data_exporter | Fetching test-cycles under release 127416, page 1
+2026-09-18 15:34:53 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:53 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.08s
+2026-09-18 15:34:53 INFO     main.exporter.data_exporter | Fetching test-cycles under release 127416, page 2
+2026-09-18 15:34:53 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:53 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.09s
+2026-09-18 15:34:53 INFO     main.exporter.data_exporter | Collected 1 test-cycles under release 127416
+2026-09-18 15:34:53 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 795994, page 1
+2026-09-18 15:34:53 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:53 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.13s
+2026-09-18 15:34:53 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 795994, page 2
+2026-09-18 15:34:53 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:53 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.14s
+2026-09-18 15:34:53 WARNING  main.exporter.data_exporter | Page 2 of test-suites under test-cycle 795994 repeated entities already seen: the endpoint seems to ignore paging, stopping here
+2026-09-18 15:34:53 INFO     main.exporter.data_exporter | Collected 7 test-suites under test-cycle 795994
+2026-09-18 15:34:53 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 795994, page 1
+2026-09-18 15:34:53 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:53 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.08s
+2026-09-18 15:34:53 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 795994
+2026-09-18 15:34:53 INFO     main.exporter.data_exporter | Fetching test-suites under release 126376, page 1
+2026-09-18 15:34:53 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:53 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.11s
+2026-09-18 15:34:53 INFO     main.exporter.data_exporter | Collected 0 test-suites under release 126376
+2026-09-18 15:34:53 INFO     main.exporter.data_exporter | Fetching test-cycles under release 126376, page 1
+2026-09-18 15:34:53 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:53 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.08s
+2026-09-18 15:34:53 INFO     main.exporter.data_exporter | Collected 0 test-cycles under release 126376
+2026-09-18 15:34:53 INFO     main.exporter.data_exporter | Fetching test-suites under release 126329, page 1
+2026-09-18 15:34:53 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:53 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.12s
+2026-09-18 15:34:53 INFO     main.exporter.data_exporter | Collected 0 test-suites under release 126329
+2026-09-18 15:34:53 INFO     main.exporter.data_exporter | Fetching test-cycles under release 126329, page 1
+2026-09-18 15:34:53 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:54 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.09s
+2026-09-18 15:34:54 INFO     main.exporter.data_exporter | Collected 0 test-cycles under release 126329
+2026-09-18 15:34:54 INFO     main.exporter.data_exporter | Fetching test-suites under release 126328, page 1
+2026-09-18 15:34:54 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:54 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.11s
+2026-09-18 15:34:54 INFO     main.exporter.data_exporter | Collected 0 test-suites under release 126328
+2026-09-18 15:34:54 INFO     main.exporter.data_exporter | Fetching test-cycles under release 126328, page 1
+2026-09-18 15:34:54 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:54 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.08s
+2026-09-18 15:34:54 INFO     main.exporter.data_exporter | Collected 0 test-cycles under release 126328
+2026-09-18 15:34:54 INFO     main.exporter.data_exporter | Fetching test-suites under release 126327, page 1
+2026-09-18 15:34:54 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:54 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.11s
+2026-09-18 15:34:54 INFO     main.exporter.data_exporter | Collected 0 test-suites under release 126327
+2026-09-18 15:34:54 INFO     main.exporter.data_exporter | Fetching test-cycles under release 126327, page 1
+2026-09-18 15:34:54 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:54 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.12s
+2026-09-18 15:34:54 INFO     main.exporter.data_exporter | Collected 0 test-cycles under release 126327
+2026-09-18 15:34:54 INFO     main.exporter.data_exporter | Fetching test-suites under release 126232, page 1
+2026-09-18 15:34:54 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:54 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.09s
+2026-09-18 15:34:54 INFO     main.exporter.data_exporter | Collected 0 test-suites under release 126232
+2026-09-18 15:34:54 INFO     main.exporter.data_exporter | Fetching test-cycles under release 126232, page 1
+2026-09-18 15:34:54 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:54 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.08s
+2026-09-18 15:34:54 INFO     main.exporter.data_exporter | Collected 0 test-cycles under release 126232
+2026-09-18 15:34:54 INFO     main.exporter.data_exporter | Fetching test-suites under release 126231, page 1
+2026-09-18 15:34:54 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:54 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.10s
+2026-09-18 15:34:54 INFO     main.exporter.data_exporter | Collected 0 test-suites under release 126231
+2026-09-18 15:34:54 INFO     main.exporter.data_exporter | Fetching test-cycles under release 126231, page 1
+2026-09-18 15:34:54 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:54 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.08s
+2026-09-18 15:34:54 INFO     main.exporter.data_exporter | Collected 0 test-cycles under release 126231
+2026-09-18 15:34:54 INFO     main.exporter.data_exporter | Fetching test-suites under release 126230, page 1
+2026-09-18 15:34:54 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:54 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.11s
+2026-09-18 15:34:54 INFO     main.exporter.data_exporter | Collected 0 test-suites under release 126230
+2026-09-18 15:34:54 INFO     main.exporter.data_exporter | Fetching test-cycles under release 126230, page 1
+2026-09-18 15:34:54 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:54 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.09s
+2026-09-18 15:34:54 INFO     main.exporter.data_exporter | Collected 0 test-cycles under release 126230
+2026-09-18 15:34:54 INFO     main.exporter.data_exporter | Fetching test-suites under release 126228, page 1
+2026-09-18 15:34:54 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:55 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.10s
+2026-09-18 15:34:55 INFO     main.exporter.data_exporter | Collected 0 test-suites under release 126228
+2026-09-18 15:34:55 INFO     main.exporter.data_exporter | Fetching test-cycles under release 126228, page 1
+2026-09-18 15:34:55 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:55 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.10s
+2026-09-18 15:34:55 INFO     main.exporter.data_exporter | Fetching test-cycles under release 126228, page 2
+2026-09-18 15:34:55 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:55 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.08s
+2026-09-18 15:34:55 INFO     main.exporter.data_exporter | Collected 4 test-cycles under release 126228
+2026-09-18 15:34:55 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 826394, page 1
+2026-09-18 15:34:55 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:55 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.15s
+2026-09-18 15:34:55 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 826394, page 2
+2026-09-18 15:34:55 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:55 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.12s
+2026-09-18 15:34:55 WARNING  main.exporter.data_exporter | Page 2 of test-suites under test-cycle 826394 repeated entities already seen: the endpoint seems to ignore paging, stopping here
+2026-09-18 15:34:55 INFO     main.exporter.data_exporter | Collected 2 test-suites under test-cycle 826394
+2026-09-18 15:34:55 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 826394, page 1
+2026-09-18 15:34:55 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:55 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.10s
+2026-09-18 15:34:55 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 826394
+2026-09-18 15:34:55 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 825890, page 1
+2026-09-18 15:34:55 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:55 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.19s
+2026-09-18 15:34:55 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 825890, page 2
+2026-09-18 15:34:55 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:55 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.16s
+2026-09-18 15:34:55 WARNING  main.exporter.data_exporter | Page 2 of test-suites under test-cycle 825890 repeated entities already seen: the endpoint seems to ignore paging, stopping here
+2026-09-18 15:34:55 INFO     main.exporter.data_exporter | Collected 9 test-suites under test-cycle 825890
+2026-09-18 15:34:55 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 825890, page 1
+2026-09-18 15:34:55 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:56 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.09s
+2026-09-18 15:34:56 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 825890
+2026-09-18 15:34:56 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 831473, page 1
+2026-09-18 15:34:56 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:56 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.13s
+2026-09-18 15:34:56 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 831473, page 2
+2026-09-18 15:34:56 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:56 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.17s
+2026-09-18 15:34:56 WARNING  main.exporter.data_exporter | Page 2 of test-suites under test-cycle 831473 repeated entities already seen: the endpoint seems to ignore paging, stopping here
+2026-09-18 15:34:56 INFO     main.exporter.data_exporter | Collected 1 test-suites under test-cycle 831473
+2026-09-18 15:34:56 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 831473, page 1
+2026-09-18 15:34:56 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:56 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.10s
+2026-09-18 15:34:56 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 831473
+2026-09-18 15:34:56 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 796806, page 1
+2026-09-18 15:34:56 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:56 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.15s
+2026-09-18 15:34:56 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 796806, page 2
+2026-09-18 15:34:56 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:56 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.14s
+2026-09-18 15:34:56 WARNING  main.exporter.data_exporter | Page 2 of test-suites under test-cycle 796806 repeated entities already seen: the endpoint seems to ignore paging, stopping here
+2026-09-18 15:34:56 INFO     main.exporter.data_exporter | Collected 1 test-suites under test-cycle 796806
+2026-09-18 15:34:56 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 796806, page 1
+2026-09-18 15:34:56 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:56 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.10s
+2026-09-18 15:34:56 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 796806
+2026-09-18 15:34:56 INFO     main.exporter.data_exporter | Fetching test-suites under release 121857, page 1
+2026-09-18 15:34:56 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:56 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.12s
+2026-09-18 15:34:56 INFO     main.exporter.data_exporter | Collected 0 test-suites under release 121857
+2026-09-18 15:34:56 INFO     main.exporter.data_exporter | Fetching test-cycles under release 121857, page 1
+2026-09-18 15:34:56 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:57 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.14s
+2026-09-18 15:34:57 INFO     main.exporter.data_exporter | Fetching test-cycles under release 121857, page 2
+2026-09-18 15:34:57 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:57 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.08s
+2026-09-18 15:34:57 INFO     main.exporter.data_exporter | Collected 1 test-cycles under release 121857
+2026-09-18 15:34:57 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 740819, page 1
+2026-09-18 15:34:57 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:57 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.14s
+2026-09-18 15:34:57 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 740819, page 2
+2026-09-18 15:34:57 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:57 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.12s
+2026-09-18 15:34:57 WARNING  main.exporter.data_exporter | Page 2 of test-suites under test-cycle 740819 repeated entities already seen: the endpoint seems to ignore paging, stopping here
+2026-09-18 15:34:57 INFO     main.exporter.data_exporter | Collected 2 test-suites under test-cycle 740819
+2026-09-18 15:34:57 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 740819, page 1
+2026-09-18 15:34:57 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:57 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.11s
+2026-09-18 15:34:57 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 740819
+2026-09-18 15:34:57 INFO     main.exporter.data_exporter | Fetching test-suites under release 121737, page 1
+2026-09-18 15:34:57 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:57 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.14s
+2026-09-18 15:34:57 INFO     main.exporter.data_exporter | Fetching test-suites under release 121737, page 2
+2026-09-18 15:34:57 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:57 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.21s
+2026-09-18 15:34:57 WARNING  main.exporter.data_exporter | Page 2 of test-suites under release 121737 repeated entities already seen: the endpoint seems to ignore paging, stopping here
+2026-09-18 15:34:57 INFO     main.exporter.data_exporter | Collected 1 test-suites under release 121737
+2026-09-18 15:34:57 INFO     main.exporter.data_exporter | Fetching test-cycles under release 121737, page 1
+2026-09-18 15:34:57 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:58 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.12s
+2026-09-18 15:34:58 INFO     main.exporter.data_exporter | Fetching test-cycles under release 121737, page 2
+2026-09-18 15:34:58 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:58 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.08s
+2026-09-18 15:34:58 INFO     main.exporter.data_exporter | Collected 1 test-cycles under release 121737
+2026-09-18 15:34:58 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 795761, page 1
+2026-09-18 15:34:58 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:58 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.11s
+2026-09-18 15:34:58 INFO     main.exporter.data_exporter | Collected 0 test-suites under test-cycle 795761
+2026-09-18 15:34:58 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 795761, page 1
+2026-09-18 15:34:58 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:58 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.13s
+2026-09-18 15:34:58 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 795761
+2026-09-18 15:34:58 INFO     main.exporter.data_exporter | Fetching test-suites under release 121533, page 1
+2026-09-18 15:34:58 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:58 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.12s
+2026-09-18 15:34:58 INFO     main.exporter.data_exporter | Collected 0 test-suites under release 121533
+2026-09-18 15:34:58 INFO     main.exporter.data_exporter | Fetching test-cycles under release 121533, page 1
+2026-09-18 15:34:58 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:58 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.08s
+2026-09-18 15:34:58 INFO     main.exporter.data_exporter | Collected 0 test-cycles under release 121533
+2026-09-18 15:34:58 INFO     main.exporter.data_exporter | Fetching test-suites under release 121032, page 1
+2026-09-18 15:34:58 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:58 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.13s
+2026-09-18 15:34:58 INFO     main.exporter.data_exporter | Collected 0 test-suites under release 121032
+2026-09-18 15:34:58 INFO     main.exporter.data_exporter | Fetching test-cycles under release 121032, page 1
+2026-09-18 15:34:58 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:58 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.15s
+2026-09-18 15:34:58 INFO     main.exporter.data_exporter | Collected 0 test-cycles under release 121032
+2026-09-18 15:34:58 INFO     main.exporter.data_exporter | Fetching test-suites under release 119902, page 1
+2026-09-18 15:34:58 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:59 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.21s
+2026-09-18 15:34:59 INFO     main.exporter.data_exporter | Collected 0 test-suites under release 119902
+2026-09-18 15:34:59 INFO     main.exporter.data_exporter | Fetching test-cycles under release 119902, page 1
+2026-09-18 15:34:59 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:59 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.09s
+2026-09-18 15:34:59 INFO     main.exporter.data_exporter | Fetching test-cycles under release 119902, page 2
+2026-09-18 15:34:59 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:59 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.09s
+2026-09-18 15:34:59 INFO     main.exporter.data_exporter | Collected 1 test-cycles under release 119902
+2026-09-18 15:34:59 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 700777, page 1
+2026-09-18 15:34:59 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:59 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.15s
+2026-09-18 15:34:59 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 700777, page 2
+2026-09-18 15:34:59 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:59 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.18s
+2026-09-18 15:34:59 WARNING  main.exporter.data_exporter | Page 2 of test-suites under test-cycle 700777 repeated entities already seen: the endpoint seems to ignore paging, stopping here
+2026-09-18 15:34:59 INFO     main.exporter.data_exporter | Collected 2 test-suites under test-cycle 700777
+2026-09-18 15:34:59 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 700777, page 1
+2026-09-18 15:34:59 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:59 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.08s
+2026-09-18 15:34:59 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 700777
+2026-09-18 15:34:59 INFO     main.exporter.data_exporter | Fetching test-suites under release 118724, page 1
+2026-09-18 15:34:59 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:59 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.12s
+2026-09-18 15:34:59 INFO     main.exporter.data_exporter | Collected 0 test-suites under release 118724
+2026-09-18 15:34:59 INFO     main.exporter.data_exporter | Fetching test-cycles under release 118724, page 1
+2026-09-18 15:34:59 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:34:59 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.10s
+2026-09-18 15:34:59 INFO     main.exporter.data_exporter | Collected 0 test-cycles under release 118724
+2026-09-18 15:34:59 INFO     main.exporter.data_exporter | Fetching test-suites under release 117543, page 1
+2026-09-18 15:34:59 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:34:59 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.13s
+2026-09-18 15:34:59 INFO     main.exporter.data_exporter | Collected 0 test-suites under release 117543
+2026-09-18 15:34:59 INFO     main.exporter.data_exporter | Fetching test-cycles under release 117543, page 1
+2026-09-18 15:34:59 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:00 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.12s
+2026-09-18 15:35:00 INFO     main.exporter.data_exporter | Fetching test-cycles under release 117543, page 2
+2026-09-18 15:35:00 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:00 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.13s
+2026-09-18 15:35:00 INFO     main.exporter.data_exporter | Collected 1 test-cycles under release 117543
+2026-09-18 15:35:00 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 665793, page 1
+2026-09-18 15:35:00 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:00 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.16s
+2026-09-18 15:35:00 INFO     main.exporter.data_exporter | Collected 0 test-suites under test-cycle 665793
+2026-09-18 15:35:00 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 665793, page 1
+2026-09-18 15:35:00 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:00 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.16s
+2026-09-18 15:35:00 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 665793
+2026-09-18 15:35:00 INFO     main.exporter.data_exporter | Fetching test-suites under release 117456, page 1
+2026-09-18 15:35:00 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:00 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.14s
+2026-09-18 15:35:00 INFO     main.exporter.data_exporter | Collected 0 test-suites under release 117456
+2026-09-18 15:35:00 INFO     main.exporter.data_exporter | Fetching test-cycles under release 117456, page 1
+2026-09-18 15:35:00 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:00 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.11s
+2026-09-18 15:35:00 INFO     main.exporter.data_exporter | Fetching test-cycles under release 117456, page 2
+2026-09-18 15:35:00 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:00 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.11s
+2026-09-18 15:35:00 INFO     main.exporter.data_exporter | Collected 1 test-cycles under release 117456
+2026-09-18 15:35:00 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 662412, page 1
+2026-09-18 15:35:00 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:01 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.12s
+2026-09-18 15:35:01 INFO     main.exporter.data_exporter | Collected 0 test-suites under test-cycle 662412
+2026-09-18 15:35:01 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 662412, page 1
+2026-09-18 15:35:01 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:01 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.14s
+2026-09-18 15:35:01 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 662412, page 2
+2026-09-18 15:35:01 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:01 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.10s
+2026-09-18 15:35:01 INFO     main.exporter.data_exporter | Collected 1 test-cycles under test-cycle 662412
+2026-09-18 15:35:01 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 665848, page 1
+2026-09-18 15:35:01 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:01 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.12s
+2026-09-18 15:35:01 INFO     main.exporter.data_exporter | Collected 0 test-suites under test-cycle 665848
+2026-09-18 15:35:01 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 665848, page 1
+2026-09-18 15:35:01 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:01 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.08s
+2026-09-18 15:35:01 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 665848, page 2
+2026-09-18 15:35:01 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:01 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.09s
+2026-09-18 15:35:01 INFO     main.exporter.data_exporter | Collected 1 test-cycles under test-cycle 665848
+2026-09-18 15:35:01 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 665849, page 1
+2026-09-18 15:35:01 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:01 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.14s
+2026-09-18 15:35:01 INFO     main.exporter.data_exporter | Collected 0 test-suites under test-cycle 665849
+2026-09-18 15:35:01 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 665849, page 1
+2026-09-18 15:35:01 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:01 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.10s
+2026-09-18 15:35:01 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 665849
+2026-09-18 15:35:01 INFO     main.exporter.data_exporter | Fetching test-suites under release 114201, page 1
+2026-09-18 15:35:01 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:01 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.13s
+2026-09-18 15:35:01 INFO     main.exporter.data_exporter | Collected 0 test-suites under release 114201
+2026-09-18 15:35:01 INFO     main.exporter.data_exporter | Fetching test-cycles under release 114201, page 1
+2026-09-18 15:35:01 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:02 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.08s
+2026-09-18 15:35:02 INFO     main.exporter.data_exporter | Collected 0 test-cycles under release 114201
+2026-09-18 15:35:02 INFO     main.exporter.data_exporter | Fetching test-suites under release 111479, page 1
+2026-09-18 15:35:02 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:02 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.12s
+2026-09-18 15:35:02 INFO     main.exporter.data_exporter | Collected 0 test-suites under release 111479
+2026-09-18 15:35:02 INFO     main.exporter.data_exporter | Fetching test-cycles under release 111479, page 1
+2026-09-18 15:35:02 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:02 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.09s
+2026-09-18 15:35:02 INFO     main.exporter.data_exporter | Fetching test-cycles under release 111479, page 2
+2026-09-18 15:35:02 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:02 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.10s
+2026-09-18 15:35:02 INFO     main.exporter.data_exporter | Collected 2 test-cycles under release 111479
+2026-09-18 15:35:02 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 630339, page 1
+2026-09-18 15:35:02 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:02 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.12s
+2026-09-18 15:35:02 INFO     main.exporter.data_exporter | Collected 0 test-suites under test-cycle 630339
+2026-09-18 15:35:02 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 630339, page 1
+2026-09-18 15:35:02 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:02 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.10s
+2026-09-18 15:35:02 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 630339
+2026-09-18 15:35:02 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 630338, page 1
+2026-09-18 15:35:02 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:02 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.11s
+2026-09-18 15:35:02 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 630338, page 2
+2026-09-18 15:35:02 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:02 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.15s
+2026-09-18 15:35:02 WARNING  main.exporter.data_exporter | Page 2 of test-suites under test-cycle 630338 repeated entities already seen: the endpoint seems to ignore paging, stopping here
+2026-09-18 15:35:02 INFO     main.exporter.data_exporter | Collected 1 test-suites under test-cycle 630338
+2026-09-18 15:35:02 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 630338, page 1
+2026-09-18 15:35:02 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:02 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.10s
+2026-09-18 15:35:02 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 630338
+2026-09-18 15:35:02 INFO     main.exporter.data_exporter | Fetching test-suites under release 111478, page 1
+2026-09-18 15:35:02 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:03 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.13s
+2026-09-18 15:35:03 INFO     main.exporter.data_exporter | Fetching test-suites under release 111478, page 2
+2026-09-18 15:35:03 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:03 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.15s
+2026-09-18 15:35:03 WARNING  main.exporter.data_exporter | Page 2 of test-suites under release 111478 repeated entities already seen: the endpoint seems to ignore paging, stopping here
+2026-09-18 15:35:03 INFO     main.exporter.data_exporter | Collected 1 test-suites under release 111478
+2026-09-18 15:35:03 INFO     main.exporter.data_exporter | Fetching test-cycles under release 111478, page 1
+2026-09-18 15:35:03 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:03 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.13s
+2026-09-18 15:35:03 INFO     main.exporter.data_exporter | Fetching test-cycles under release 111478, page 2
+2026-09-18 15:35:03 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:03 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.08s
+2026-09-18 15:35:03 INFO     main.exporter.data_exporter | Collected 2 test-cycles under release 111478
+2026-09-18 15:35:03 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 630337, page 1
+2026-09-18 15:35:03 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:03 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.15s
+2026-09-18 15:35:03 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 630337, page 2
+2026-09-18 15:35:03 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:03 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.15s
+2026-09-18 15:35:03 WARNING  main.exporter.data_exporter | Page 2 of test-suites under test-cycle 630337 repeated entities already seen: the endpoint seems to ignore paging, stopping here
+2026-09-18 15:35:03 INFO     main.exporter.data_exporter | Collected 1 test-suites under test-cycle 630337
+2026-09-18 15:35:03 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 630337, page 1
+2026-09-18 15:35:03 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:03 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.12s
+2026-09-18 15:35:03 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 630337
+2026-09-18 15:35:03 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 630336, page 1
+2026-09-18 15:35:03 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:04 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.20s
+2026-09-18 15:35:04 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 630336, page 2
+2026-09-18 15:35:04 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:04 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.18s
+2026-09-18 15:35:04 WARNING  main.exporter.data_exporter | Page 2 of test-suites under test-cycle 630336 repeated entities already seen: the endpoint seems to ignore paging, stopping here
+2026-09-18 15:35:04 INFO     main.exporter.data_exporter | Collected 1 test-suites under test-cycle 630336
+2026-09-18 15:35:04 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 630336, page 1
+2026-09-18 15:35:04 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:04 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.10s
+2026-09-18 15:35:04 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 630336
+2026-09-18 15:35:04 INFO     main.exporter.data_exporter | Fetching test-suites under release 118627, page 1
+2026-09-18 15:35:04 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:04 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.12s
+2026-09-18 15:35:04 INFO     main.exporter.data_exporter | Collected 0 test-suites under release 118627
+2026-09-18 15:35:04 INFO     main.exporter.data_exporter | Fetching test-cycles under release 118627, page 1
+2026-09-18 15:35:04 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:04 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.10s
+2026-09-18 15:35:04 INFO     main.exporter.data_exporter | Fetching test-cycles under release 118627, page 2
+2026-09-18 15:35:04 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:04 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.08s
+2026-09-18 15:35:04 INFO     main.exporter.data_exporter | Collected 1 test-cycles under release 118627
+2026-09-18 15:35:04 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 667024, page 1
+2026-09-18 15:35:04 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:04 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.18s
+2026-09-18 15:35:04 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 667024, page 2
+2026-09-18 15:35:04 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:04 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.16s
+2026-09-18 15:35:04 WARNING  main.exporter.data_exporter | Page 2 of test-suites under test-cycle 667024 repeated entities already seen: the endpoint seems to ignore paging, stopping here
+2026-09-18 15:35:04 INFO     main.exporter.data_exporter | Collected 2 test-suites under test-cycle 667024
+2026-09-18 15:35:04 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 667024, page 1
+2026-09-18 15:35:04 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:05 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.08s
+2026-09-18 15:35:05 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 667024
+2026-09-18 15:35:05 INFO     main.exporter.data_exporter | Fetching test-suites under root 0, page 1
+2026-09-18 15:35:05 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:05 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.15s
+2026-09-18 15:35:05 INFO     main.exporter.data_exporter | Collected 0 test-suites under root 0
+2026-09-18 15:35:05 INFO     main.exporter.data_exporter | Fetching test-cycles under root 0, page 1
+2026-09-18 15:35:05 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:05 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.11s
+2026-09-18 15:35:05 INFO     main.exporter.data_exporter | Fetching test-cycles under root 0, page 2
+2026-09-18 15:35:05 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:05 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.14s
+2026-09-18 15:35:05 INFO     main.exporter.data_exporter | Collected 3 test-cycles under root 0
+2026-09-18 15:35:05 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 806024, page 1
+2026-09-18 15:35:05 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:05 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.13s
+2026-09-18 15:35:05 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 806024, page 2
+2026-09-18 15:35:05 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:05 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.13s
+2026-09-18 15:35:05 WARNING  main.exporter.data_exporter | Page 2 of test-suites under test-cycle 806024 repeated entities already seen: the endpoint seems to ignore paging, stopping here
+2026-09-18 15:35:05 INFO     main.exporter.data_exporter | Collected 2 test-suites under test-cycle 806024
+2026-09-18 15:35:05 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 806024, page 1
+2026-09-18 15:35:05 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:05 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.11s
+2026-09-18 15:35:05 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 806024
+2026-09-18 15:35:05 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 759652, page 1
+2026-09-18 15:35:05 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:06 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.23s
+2026-09-18 15:35:06 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 759652, page 2
+2026-09-18 15:35:06 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:06 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.14s
+2026-09-18 15:35:06 WARNING  main.exporter.data_exporter | Page 2 of test-suites under test-cycle 759652 repeated entities already seen: the endpoint seems to ignore paging, stopping here
+2026-09-18 15:35:06 INFO     main.exporter.data_exporter | Collected 1 test-suites under test-cycle 759652
+2026-09-18 15:35:06 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 759652, page 1
+2026-09-18 15:35:06 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:06 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.11s
+2026-09-18 15:35:06 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 759652
+2026-09-18 15:35:06 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 738818, page 1
+2026-09-18 15:35:06 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:06 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.13s
+2026-09-18 15:35:06 INFO     main.exporter.data_exporter | Fetching test-suites under test-cycle 738818, page 2
+2026-09-18 15:35:06 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites
+2026-09-18 15:35:06 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-suites -> 200 in 0.14s
+2026-09-18 15:35:06 WARNING  main.exporter.data_exporter | Page 2 of test-suites under test-cycle 738818 repeated entities already seen: the endpoint seems to ignore paging, stopping here
+2026-09-18 15:35:06 INFO     main.exporter.data_exporter | Collected 1 test-suites under test-cycle 738818
+2026-09-18 15:35:06 INFO     main.exporter.data_exporter | Fetching test-cycles under test-cycle 738818, page 1
+2026-09-18 15:35:06 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles
+2026-09-18 15:35:06 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-cycles -> 200 in 0.12s
+2026-09-18 15:35:06 INFO     main.exporter.data_exporter | Collected 0 test-cycles under test-cycle 738818
+2026-09-18 15:35:06 INFO     main.exporter.data_exporter | Enumerated 84 containers: 26 cycles, 58 suites
+PASSED [ 83%]
+5. The execution tree: 25 releases, 26 cycles, 58 suites
+   carrying an integration field : 0
+   releases: 25 entities
+     with a Jira URL : 0
+     nothing that looks like a Jira reference
+PASSED [100%]2026-09-18 15:35:06 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/18978427
+2026-09-18 15:35:06 INFO     main.client.rest_client | GET https://healthspring.qtestnet.com/api/v3/projects/24901/test-runs/18978427 -> 200 in 0.24s
+
+6. The walk against one run fetched on its own (18978427)
+   fields from the walk    : 16
+   fields on its own       : 16
+   only when fetched alone : none
+
+Process finished with exit code 1

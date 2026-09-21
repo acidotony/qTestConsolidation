@@ -1,0 +1,20 @@
+# The inventory of the source instance lives in tests_output/inventory and is
+# committed on purpose: the migration is tracked against it.
+
+# Environment and user configuration: sensitive data, never commit
+.env
+.env.*
+*.env
+!.env.example
+!*.example.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# IDE
+.idea/
+.vscode/
